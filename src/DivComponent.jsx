@@ -75,7 +75,7 @@ const DivComponent = () => {
       <UlComponent data={leftEle} side={"left"} handleChange={handleChange} />
       <div className="flex flex-col gap-3 border-1 border-gray-400 p-4 w-full items-center">
         <button
-          className="h-7 w-10 bg-gray-300 border-1"
+          className={leftEle.length > 0 ? "h-7 w-10 bg-gray-300 border-1" : "h-7 w-10 border-1"}
           onClick={() => handleAll("right")}
         >
           {">>"}
@@ -93,7 +93,7 @@ const DivComponent = () => {
           {"<"}
         </button>
         <button
-          className="h-7 w-10 bg-gray-300 border-1"
+          className={rightEle.length > 0 ? "h-7 w-10 bg-gray-300 border-1" : "h-7 w-10 border-1"}
           onClick={() => handleAll("left")}
         >
           {"<<"}
